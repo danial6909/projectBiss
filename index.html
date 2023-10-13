@@ -13,23 +13,31 @@
             direction: rtl;
         }
         .header-top{
-            width: 100%;
-            height: 80px;
+            width: 1200px;
+            height: 70px;
             background-color:  #334756;
             display: flex;
             justify-content:space-between;
             align-items:center;
-            
+            border-radius: 50px;
+            margin:auto;
         }
         .header-right{
             width: 100px;
             height: 100%;
-            background-color: #4fc717;
+            background-color:  #334756;
+            border-radius: 50px;
+        }
+        .header-right>img{
+            width: 60px;
+            height: 60px;
+            margin-right: 20px;
+            margin-top: 4px;
         }
         .header-center{
             width: 800px;
             height: 100%;
-            background-color:#af2f8f;
+            background-color: #334756;
             display: flex;
             align-items: center;
             gap: 50px;
@@ -37,39 +45,85 @@
         .header-left{
             width: 100px;
             height: 100%;
-            background-color: #177bc7;
+            background-color:  #334756;
+            border-radius: 50px;
+        }
+       
+        #right_a{
+            margin-right: 200px;
+        }
+        .header-input{
+            width: 70px;
+            height: 30px;
+            margin-top: 20px;
+            margin-right: 15px;
+            border-radius: 20px;
+            border: none;
+            cursor: pointer;
+            background-color: rgb(141, 136, 130);
+            font-weight: bold;
+            font-size: 12pt;
+            transition: all 0.3s ease;
+        }
+        .header-input:hover.header-input{
+            box-shadow:0px 0px 40px 10px rgb(255, 255, 255);
+            
+            background-color: #fff;
+            border: 1px solid rgb(0, 0, 0);
         }
         .header_link{
+            position: relative;
             color: #fff;
             text-decoration: none;
             font-weight: bold;
         }
-        #right_a{
-            margin-right: 200px;
+        .header_link::after{
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: -2px;
+            width: 100%;
+            height: 2px;
+            background-color: #ff0000;
+            transform: scaleX(0);
+            transform-origin: bottom ;
+            transition: transform 0.3s ease;
         }
-        #left_buttom{
-            line-height: 80px;
-            padding-right: 25px;
+        .header_link:hover::after{
+            transform: scaleX(1);
+            transform-origin: bottom;
+           
+        }
+        .header_link:hover{
+            color: rgb(0, 255, 34);
+        }
+        .section{
+            width: 1200px;
+            height: 600px;
+            background-color: rgb(69, 75, 75);
+            margin: auto;
+            margin-top: 20px;
+            border-radius: 20px;
         }
     </style>
 </head>
 <body>
-    <header>
-        <div class="header-top">
-            <div class="header-right"></div>
-            <div class="header-center">
-                <a id="right_a" class="header_link" href="">درباره ما</a>
-                <a class="header_link" href="">خدمات</a>
-                <a class="header_link" href="">تیم ما</a>
-                <a class="header_link" href="">مشتریان</a>
-                <a class="header_link" href="">نمونه کار</a>
-            </div>
-            <div class="header-left">
-                    <a id="left_buttom" class="header_link" href="">تماس باما</a>
-            </div>
+    <div class="header-top">
+        <div class="header-right">
+            <img src="image/cooperation.png" alt="">
         </div>
-
-    </header>
-
+        <div class="header-center">
+            <a id="right_a" class="header_link" href="">درباره ما</a>
+            <a class="header_link" href="">خدمات</a>
+            <a class="header_link" href="">تیم ما</a>
+            <a class="header_link" href="">مشتریان</a>
+            <a class="header_link" href="">نمونه کار</a>
+        </div>
+        <div class="header-left">
+            <input class="header-input" type="submit" value="تماس با ما">  
+        </div>
+           
+    </div>
+    <div class="section"></div>
 </body>
 </html>
